@@ -1,5 +1,6 @@
 package com.example.myblossom
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -56,6 +57,10 @@ class LoginActivity : AppCompatActivity() {
                 && validatePassword(txtPassword1, txtPassword2)
             ) {
                 Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
+
+                val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
+                startActivity(intent)
+
             } else {
                 Toast.makeText(this, "Failed", Toast.LENGTH_LONG).show()
             }

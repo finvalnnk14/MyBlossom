@@ -28,6 +28,10 @@
             android:name=".RegActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
