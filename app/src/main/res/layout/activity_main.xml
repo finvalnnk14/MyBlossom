@@ -43,5 +43,15 @@
         android:layout_gravity="center"
         android:text="Memulai" />
 
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/regBtn"
+        android:layout_width="336dp"
+        android:layout_height="55dp"
+        android:background="@drawable/bottomsudah"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:text="Registrasi" />
+
 
 </LinearLayout>

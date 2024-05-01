@@ -6,10 +6,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="16dp"
-    tools:context=".MainActivity">
+    tools:context=".RegActivity">
 
 
+    <ImageView
+        android:id="@+id/blossomImage"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/blossom" />
 
+    <TextView
+        android:layout_marginTop="0dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Buat Akun Anda"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorRed"
+        />
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -82,12 +99,17 @@
             android:textColorHint="#757575"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+
+
+
     <Button
         android:id="@+id/validateBtn"
         android:layout_width="336dp"
         android:layout_height="55dp"
         android:background="@drawable/bottomsudah"
-        android:text="Saya sudah memiliki akun" />
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="Berikutnya" />
 
 
 </LinearLayout>

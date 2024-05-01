@@ -1,5 +1,6 @@
 package com.example.myblossom
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -20,6 +21,9 @@ class RegActivity : AppCompatActivity() {
 
         val txtName1 = findViewById<TextInputEditText>(R.id.txtName1)
         val txtName2 = findViewById<TextInputLayout>(R.id.txtName2)
+
+
+
 
         txtName1.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
@@ -77,6 +81,8 @@ class RegActivity : AppCompatActivity() {
                 && validateConPassword(txtPassword1, txtConPassword1, txtConPassword2)
             ) {
                 Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
+                val intent = Intent(this@RegActivity, RegActivity2::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Failed", Toast.LENGTH_LONG).show()
             }
