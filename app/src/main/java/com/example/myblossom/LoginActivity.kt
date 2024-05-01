@@ -10,14 +10,41 @@ import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.myblossom.databinding.ActivityLoginBinding
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.auth.FirebaseAuth
 
 
 class LoginActivity : AppCompatActivity() {
+    // private lateinit var binding: ActivityLoginBinding
+    private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_login)
+        // setContentView(binding.root)
+        firebaseAuth = FirebaseAuth.getInstance()
+        /*
+        binding.validateBtn.setOnClickListener {
+            val email = binding.txtEmail1.text.toString()
+            val password = binding.txtPassword1.text.toString()
+            if (validateEmail(binding.txtEmail1, binding.txtEmail2) && validatePassword(binding.txtPassword1, binding.txtPassword2)) {
+                firebaseAuth.signInWithEmailAndPassword(email, password) .addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
+                        startActivity(intent)
+                    }
+                    else {
+                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+            else {
+                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            }
+        }
+        */
 
 
 
