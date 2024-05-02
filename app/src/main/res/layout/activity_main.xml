@@ -41,7 +41,7 @@
         android:background="@drawable/bottomsudah"
         android:textAllCaps="false"
         android:layout_gravity="center"
-        android:text="Memulai" />
+        android:text="Saya sudah memilik akun" />
 
     <Button
         android:layout_marginTop="10dp"

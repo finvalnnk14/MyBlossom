@@ -109,6 +109,7 @@
         android:background="@drawable/bottomsudah"
         android:layout_gravity="center"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:text="Berikutnya" />
 
 

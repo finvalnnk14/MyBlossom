@@ -71,12 +71,14 @@
 
 
     <Button
+        android:layout_marginTop="20dp"
         android:id="@+id/validateBtn"
         android:layout_width="336dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
+        android:textAllCaps="false"
         android:background="@drawable/bottomsudah"
-        android:text="Saya sudah memiliki akun" />
+        android:text="Login" />
 
 
 </LinearLayout>
