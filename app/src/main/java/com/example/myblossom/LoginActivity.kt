@@ -7,48 +7,74 @@ import android.os.Bundle
 
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-//import com.example.myblossom.databinding.ActivityLoginBinding
+import com.example.myblossom.databinding.ActivityLoginBinding
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-//import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 
 class LoginActivity : AppCompatActivity() {
-    // private lateinit var binding: ActivityLoginBinding
-    //private lateinit var firebaseAuth: FirebaseAuth
+
+    private lateinit var binding: ActivityLoginBinding
+    private lateinit var firebaseAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_login)
-        // setContentView(binding.root)
-        //firebaseAuth = FirebaseAuth.getInstance()
-        /*
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        firebaseAuth = Firebase.auth
+
         binding.validateBtn.setOnClickListener {
+
             val email = binding.txtEmail1.text.toString()
             val password = binding.txtPassword1.text.toString()
-            if (validateEmail(binding.txtEmail1, binding.txtEmail2) && validatePassword(binding.txtPassword1, binding.txtPassword2)) {
+
+            if(checkField()) {
                 firebaseAuth.signInWithEmailAndPassword(email, password) .addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
-                        startActivity(intent)
+                    if(it.isSuccessful) {
+                        val moveToRegisterActivity = Intent(this@LoginActivity, FirstActivity::class.java)
+                        startActivity(moveToRegisterActivity)
                     }
                     else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Username or Password is not correct", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
-            else {
-                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
-            }
         }
-        */
+    }
+
+    private fun checkField(): Boolean {
+
+        val email = binding.txtEmail1.text.toString()
+        val password = binding.txtPassword1.text.toString()
+
+        if(email.isEmpty()) {
+            binding.txtEmail2.error = "This field must be filled"
+            return false
+        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            binding.txtEmail2.error = "Email format is not valid"
+            return false
+        }
+        if(password.isEmpty()) {
+            binding.txtPassword2.error = "This field must be filled"
+            return false
+        }
+        if(binding.txtPassword1.length() <= 6) {
+            binding.txtPassword2.error = "Password should be at least 6 characters"
+            return false
+        }
+        return true
+    }
 
 
-
-
+        /*
         val txtEmail1 = findViewById<TextInputEditText>(R.id.txtEmail1)
         val txtEmail2 = findViewById<TextInputLayout>(R.id.txtEmail2)
 
@@ -174,4 +200,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+    */
+
 }
