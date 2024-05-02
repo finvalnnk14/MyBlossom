@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context=".RegActivity3">
+
+
+    <ImageView
+        android:id="@+id/blossomImage"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/blossom" />
+
+    <TextView
+        android:layout_marginTop="0dp"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:text="    Kami berjanji menjaga data anda tetaap aman, terlindungi dan pribadi."
+        android:textSize="12dp"
+        android:layout_gravity="center"
+        android:textColor="@color/colorRed"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:text="Mohon luangkan waktu sejenak untuk mengetahui kebjakan kami"
+        android:textSize="12dp"
+        android:layout_gravity="center"
+        android:textColor="@color/colorRed"
+        />
+
+
+
+    <CheckBox
+        android:layout_marginTop="30dp"
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorRed"
+        android:text="Saya menyetujui ketentuan layanan Blossom" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorRed"
+        android:text="Saya menyetujui ketentuan layanan Blossom" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorRed"
+        android:text="Saya menyetujui ketentuan layanan Blossom" />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/validateBtn3"
+        android:layout_width="336dp"
+        android:layout_height="55dp"
+        android:background="@drawable/bottomsudah"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:text="Simpan" />
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context=".FirstActivity">
+
+
+    <ImageView
+        android:id="@+id/blossomImage"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/darah" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Kapan hari menstruasi Anda yang terakhir ?"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorRed"
+        />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:datePickerMode="calendar"
+        android:colorAccent="@color/colorRed"
+        android:calendarTextColor="@color/colorRed"
+        android:headerBackground="@color/colorRed"
+        android:textAlignment="center" />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/validateBtn2"
+        android:layout_width="156dp"
+        android:layout_height="55dp"
+        android:background="@drawable/bottomsudah"
+        android:layout_gravity="right"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:text="Berikutnya" />
+
+
+
+</LinearLayout>

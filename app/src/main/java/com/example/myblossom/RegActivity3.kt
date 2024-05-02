@@ -14,22 +14,19 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 
-class RegActivity2 : AppCompatActivity() {
+class RegActivity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register2)
+        setContentView(R.layout.activity_register3)
 
-        val validateBtn2 = findViewById<Button>(R.id.validateBtn2)
-        validateBtn2.setOnClickListener {
-            val intent = Intent(this@RegActivity2, RegActivity3::class.java)
+        val validateBtn3 = findViewById<Button>(R.id.validateBtn3)
+        validateBtn3.setOnClickListener {
+            val intent = Intent(this@RegActivity3, MainActivity::class.java)
             startActivity(intent)
 
         }
 
 
-
     }
-
-
 
 }
