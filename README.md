@@ -29,6 +29,11 @@ User:
 - Untuk tahap login user akan diminta memasukkan tanggal kapan hari menstruasi anda yang terakhir, berapa lama rata-rata siklus menstruasi anda, dan bagaimana mood anda hari ini
 - Lalu dari input yang telah dimasukkan sama user model machine learning yang telah dibuat oleh tim ML
 
+Dokter:
+- Bagi yang ingin mendaftarkan diri sebagai mitra dokter harus mengisi formulir di website Bloossom terlebih dahulu
+- Ketika user mitra dokter telah mengisi formulir di website Bloossom, selanjutnya mitra akan dikirimkan email dan password untuk dapat login ke aplikasi Bloossom
+- Dokter bisa melakukan konsultasi dengan user pasien
+
 ⚠️Reminder⚠️
 Aplikasi pendeteksi siklus pada wanita ini tidak mampu mendeteksi secara akurat, dikarenakan setiap orang mempunyai siklus yang berbeda-beda.
 Aplikasi ini lebih baik digunakan untuk orang-orang yang tidak mengidap penyakit Polycystic Ovary Syndrome (PCOS), menopause, dll.
