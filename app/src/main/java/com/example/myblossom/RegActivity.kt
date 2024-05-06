@@ -7,84 +7,18 @@ import android.os.Bundle
 
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
-import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.myblossom.databinding.ActivityRegisterBinding
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import com.google.firebase.Firebase
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
 
 
 class RegActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityRegisterBinding
-    private lateinit var firebaseAuth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        firebaseAuth = Firebase.auth
+        setContentView(R.layout.activity_register)
 
-        binding.validateBtn.setOnClickListener {
-
-            val email = binding.txtEmail1.text.toString()
-            val password = binding.txtPassword1.text.toString()
-
-            if(checkField()) {
-                firebaseAuth.createUserWithEmailAndPassword(email, password) .addOnCompleteListener {
-                    if(it.isSuccessful) {
-                        Toast.makeText(this, "Account created successfully!", Toast.LENGTH_SHORT) .show()
-                        val moveToMainActivity = Intent(this@RegActivity, MainActivity::class.java)
-                        startActivity(moveToMainActivity)
-                    }
-                    else {
-                        Log.e("Error: ", it.exception.toString())
-                    }
-                }
-            }
-        }
-    }
-
-    private fun checkField(): Boolean {
-
-        val email = binding.txtEmail1.text.toString()
-        val password = binding.txtPassword1.text.toString()
-        val confirmpassword = binding.txtConPassword1.text.toString()
-
-        if(email.isEmpty()) {
-            binding.txtEmail2.error = "This field must be filled"
-            return false
-        }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            binding.txtEmail2.error = "Email format is not valid"
-            return false
-        }
-        if(password.isEmpty()) {
-            binding.txtPassword2.error = "This field must be filled"
-            return false
-        }
-        if(binding.txtPassword1.length() <= 6) {
-            binding.txtPassword2.error = "Password should be at least 6 characters"
-            return false
-        }
-        if(confirmpassword.isEmpty()) {
-            binding.txtConPassword2.error = "This field must be filled"
-            return false
-        }
-        if(password != confirmpassword) {
-            binding.txtConPassword2.error = "Password does not match"
-            return false
-        }
-        return true
-    }
-
-        /*
         val txtName1 = findViewById<TextInputEditText>(R.id.txtName1)
         val txtName2 = findViewById<TextInputLayout>(R.id.txtName2)
 
@@ -234,7 +168,5 @@ class RegActivity : AppCompatActivity() {
                 true
             }
         }
-        */
-
-
+    }
 }

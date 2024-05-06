@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <!--ListView
+        android:id="@+id/articleList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/-->
+
+
+    <!--ImageView
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/arti1"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:src="@drawable/arti1" />
+
+
+    <ImageView
+        android:id="@+id/arti2"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/arti2" /-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="5"
+        tools:listitem="@layout/article_list" />
+
+
 
     <TextView android:layout_width="match_parent"
               android:layout_centerInParent="true"
@@ -10,4 +46,6 @@
               android:textSize="18sp"
               android:text="@string/article"
               android:layout_height="wrap_content"/>
-</RelativeLayout>
+
+
+</LinearLayout>

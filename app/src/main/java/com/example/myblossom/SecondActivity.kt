@@ -17,7 +17,7 @@ import com.google.android.material.textfield.TextInputLayout
 
 
 class SecondActivity : AppCompatActivity() {
-   
+
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

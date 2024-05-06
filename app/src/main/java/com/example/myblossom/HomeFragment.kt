@@ -14,7 +14,7 @@ class HomeFragment : Fragment(){
 
     private val progressBar: ProgressBar? = null
     private val progressText: TextView? = null
-   // lateinit var laundriesRecycler: RecyclerView
+    // lateinit var laundriesRecycler: RecyclerView
     var i = 0
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
