@@ -34,6 +34,10 @@ Dokter:
 - Ketika user mitra dokter telah mengisi formulir di website Bloossom, selanjutnya mitra akan dikirimkan email dan password untuk dapat login ke aplikasi Bloossom
 - Dokter bisa melakukan konsultasi dengan user pasien
 
+**🚧 Code Branch**
+- Cloud Computing: <a href='https://github.com/finvalnnk14/MyBlossom/tree/branch-cc/CC'> Branch CC </a>
+- Machine Learning: <a href='https://github.com/finvalnnk14/MyBlossom/tree/branch-ml/ML'> Branch ML </a>
+
 ⚠️Reminder⚠️
 Aplikasi pendeteksi siklus pada wanita ini tidak mampu mendeteksi secara akurat, dikarenakan setiap orang mempunyai siklus yang berbeda-beda.
 Aplikasi ini lebih baik digunakan untuk orang-orang yang tidak mengidap penyakit Polycystic Ovary Syndrome (PCOS), menopause, dll.
