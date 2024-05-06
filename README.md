@@ -35,7 +35,7 @@ Dokter:
 - Dokter bisa melakukan konsultasi dengan user pasien
 
 🚧 Code Branch
-Cloud Computing: CC
+Cloud Computing: <a href='https://github.com/finvalnnk14/MyBlossom/tree/branch-cc/CC'> Branch CC </a>
 Machine Learning: 
 
 ⚠️Reminder⚠️
