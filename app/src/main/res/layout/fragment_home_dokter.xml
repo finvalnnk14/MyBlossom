@@ -11,7 +11,7 @@
         android:layout_marginLeft="20dp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Trending Article"
+        android:text="Daftar Pasien"
         android:textStyle="bold"
         android:textSize="18dp"
         android:layout_gravity="left"
@@ -30,23 +30,23 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
+        android:id="@+id/recycleruser"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:itemCount="5"
-        tools:listitem="@layout/article_list" />
+        tools:listitem="@layout/user_list" />
 
 
 
     <TextView android:layout_width="match_parent"
-              android:layout_centerInParent="true"
-              android:textAlignment="center"
-              android:textSize="18sp"
-              android:visibility="gone"
-              android:text="@string/article"
-              android:layout_height="wrap_content"/>
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:text="@string/konsultasi"
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>
