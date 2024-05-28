@@ -19,7 +19,7 @@
         />
     <TextView
         android:id="@+id/searchView"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
@@ -32,6 +32,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="30dp"
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

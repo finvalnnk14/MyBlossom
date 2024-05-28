@@ -1,9 +1,11 @@
 package com.example.myblossom
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -31,12 +33,31 @@ class KonsultasiFragment : Fragment(){
         data.add(UsersViewModel(R.drawable.profile, "Dokter Dua", "",""))
 
         // This will pass the ArrayList to our Adapter
-        val adapter = UserAdapter(data)
+        val DokterAdapter = DokterAdapter(data)
+
+
 
         // Setting the Adapter with the recyclerview
-        recycleruser.adapter = adapter
+        recycleruser.adapter = DokterAdapter
+
+
+        DokterAdapter.setOnClickListener( object:
+            DokterAdapter.OnClickListener {
+            override fun onClick(position: Int, model: UsersViewModel) {
+                Toast.makeText(requireActivity(), "satu" + position , Toast.LENGTH_SHORT).show();
+//                val intent = Intent (requireActivity(), DaftarKonsultasi::class.java)
+//                requireActivity().startActivity(intent)
+
+            }
+
+            override fun onClick(p0: View?) {
+                Toast.makeText(requireActivity(), "dua", Toast.LENGTH_SHORT).show();
+            }
+        })
 
         return root
     }
+
+
 
 }

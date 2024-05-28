@@ -22,7 +22,7 @@ class DashboardDokterActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.homeDokterFragment-> {
                     loadFragmentx(HomeDokterFragment())
-
+                    true
                 }
 
 
@@ -30,7 +30,7 @@ class DashboardDokterActivity : AppCompatActivity() {
                 R.id.profileFragment-> {
                     title=resources.getString(R.string.profile)
                     loadFragmentx(ProfileFragment())
-
+                    true
                 }
 
 
