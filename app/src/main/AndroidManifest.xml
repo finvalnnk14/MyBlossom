@@ -2,7 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +20,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyBlossom"
         tools:targetApi="31">
+        <activity
+            android:name=".PasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DaftarKonsultasi"
+            android:exported="false" />
         <activity
             android:name=".DashboardDokterActivity"
             android:exported="false" />
@@ -27,32 +40,28 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RegActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RegActivity2"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RegActivity3"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".FirstActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SecondActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ModActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".DashboardActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".DaftarKonsultasi"
-            android:exported="true"></activity>
-
+            android:exported="true" />
     </application>
 
 </manifest>

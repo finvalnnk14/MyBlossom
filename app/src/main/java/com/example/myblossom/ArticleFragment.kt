@@ -1,58 +1,110 @@
 package com.example.myblossom
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-//import android.support.v4.app.Fragment
-
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ImageView
-import android.widget.ListView
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.SearchView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
-import java.util.*
-
-class ArticleFragment : Fragment(){
-
-
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-        super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
-        val root = inflater.inflate(R.layout.fragment_article, container, false)
-
-        // getting the recyclerview by its id
-        val recyclerview = root.findViewById<RecyclerView>(R.id.recyclerview)
+import com.example.myblossom.databinding.FragmentArticleBinding
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import android.widget.Filter
+import android.widget.Filter.FilterResults
 
 
+class ArticleFragment : Fragment(), ArticleAdapter.OnItemClickListener {
+    private lateinit var dbReference: DatabaseReference
+    private lateinit var articleAdapter: ArticleAdapter
+    private lateinit var articleList: ArrayList<ArticleModel>
+    private lateinit var binding: FragmentArticleBinding
 
-        // this creates a vertical layout Manager
-        recyclerview.layoutManager = LinearLayoutManager(activity)
-
-        // ArrayList of class ItemsViewModel
-        val data = ArrayList<ItemsViewModel>()
-        data.add(ItemsViewModel(R.drawable.arti1, "", ""))
-        data.add(ItemsViewModel(R.drawable.arti2, "", ""))
-        data.add(ItemsViewModel(R.drawable.arti1, "", ""))
-        data.add(ItemsViewModel(R.drawable.arti2, "", ""))
-
-        // This will pass the ArrayList to our Adapter
-        val adapter = CustomAdapter(data)
-
-        // Setting the Adapter with the recyclerview
-        recyclerview.adapter = adapter
-
-        return root
+    companion object {
+        const val ARTICLE = "Article"
     }
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentArticleBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initFirebase()
+        setupRecyclerView()
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                binding.searchView.clearFocus()
+                if (query != null) {
+                    articleAdapter.filter.filter(query)
+                }
+                return false
+            }
 
+            override fun onQueryTextChange(newText: String?): Boolean {
+                if (newText != null) {
+                    articleAdapter.filter.filter(newText)
+                }
+                return true
+            }
+        })
+    }
 
+    private fun initFirebase() {
+        val db = FirebaseDatabase.getInstance()
+        dbReference = db.reference.child(ARTICLE)
+
+        dbReference.addValueEventListener(object : ValueEventListener {
+            @SuppressLint("NotifyDataSetChanged")
+            override fun onDataChange(snapshot: DataSnapshot) {
+                articleList.clear()
+                for (articleSnap in snapshot.children) {
+                    articleSnap.getValue(ArticleModel::class.java)?.let { articleModel ->
+                        articleModel.title = articleSnap.key.toString()
+                        articleList.add(articleModel)
+                    }
+                }
+                articleAdapter.notifyDataSetChanged()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                showToast("${error.details} ${error.message}")
+            }
+        })
+    }
+
+    private fun setupRecyclerView() {
+        articleList = ArrayList()
+        articleAdapter = ArticleAdapter(this, articleList)
+        articleAdapter.setOnItemClickListener(this)
+        binding.rvArticle.apply {
+            layoutManager = LinearLayoutManager(context)
+            setHasFixedSize(true)
+            adapter = articleAdapter
+        }
+    }
+
+    override fun onItemClick(article: ArticleModel?) {
+        article?.let {
+            val fragment = ArticleDetailFragment.newInstance(it)
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)  // Make sure R.id.container is the correct container
+                .addToBackStack(null)
+                .commit()
+        }
+    }
+
+    private fun showToast(text: String) {
+        Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
+    }
 }

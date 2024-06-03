@@ -6,5 +6,7 @@
     <string name="konsultasi">Konsultasi</string>
     <string name="profile">Profile</string>
     <string name="dashboard_dokter">Dashboard Dokter</string>
+    <string name="title">Title</string>
+    <string name="trending_article">Trending Article</string>
 
 </resources>

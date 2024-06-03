@@ -13,9 +13,13 @@ import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
 
-class HomeDokterFragment : Fragment(){
+class HomeDokterFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
@@ -25,14 +29,13 @@ class HomeDokterFragment : Fragment(){
         val recycleruser = root.findViewById<RecyclerView>(R.id.recycleruser)
 
 
-
         // this creates a vertical layout Manager
         recycleruser.layoutManager = LinearLayoutManager(activity)
 
         // ArrayList of class ItemsViewModel
         val data = ArrayList<UsersViewModel>()
-        data.add(UsersViewModel(R.drawable.profile, "Pasien Satu", "",""))
-        data.add(UsersViewModel(R.drawable.profile, "Pasien Dua", "",""))
+        data.add(UsersViewModel(R.drawable.profile, "Pasien Satu", "", ""))
+        data.add(UsersViewModel(R.drawable.profile, "Pasien Dua", "", ""))
 
         // This will pass the ArrayList to our Adapter
         val adapter = UserAdapter(data)

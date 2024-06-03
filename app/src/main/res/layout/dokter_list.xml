@@ -67,18 +67,6 @@
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-
-            <!--Button
-                android:id="@+id/hapusView"
-                android:layout_marginTop="-10dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/info"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                /-->
-
     </LinearLayout>
 
     </LinearLayout>

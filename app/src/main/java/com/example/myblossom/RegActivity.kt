@@ -42,6 +42,9 @@ class RegActivity : AppCompatActivity() {
                 }
             }
         }
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun checkField(): Boolean {

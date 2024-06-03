@@ -8,6 +8,14 @@
     android:layout_margin="16dp"
     tools:context=".RegActivity2">
 
+    <ImageView
+        android:id="@+id/back"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:src="@drawable/ic_back"
+        app:tint="@color/colorRed" />
 
     <ImageView
         android:id="@+id/blossomImage"

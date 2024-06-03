@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <TextView
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_width="150dp"
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trending Article"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:layout_gravity="left"
-        android:textColor="@color/colorRed"
-        />
-    <TextView
-        android:id="@+id/searchView"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/cari"
-        android:text=""
-        android:layout_gravity="left"
+        android:gravity="left"
+        android:text="@string/trending_article"
+        android:textColor="@color/colorRed"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="30dp"
-        android:id="@+id/recyclerview"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:itemCount="5"
-        tools:listitem="@layout/article_list" />
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/cari"
+        android:iconifiedByDefault="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintTop_toBottomOf="@id/tv" />
 
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_article"
+            android:paddingBottom="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            tools:listitem="@layout/item_article" />
+    </ScrollView>
 
-    <TextView android:layout_width="match_parent"
-              android:layout_centerInParent="true"
-              android:textAlignment="center"
-              android:textSize="18sp"
-              android:visibility="gone"
-              android:text="@string/article"
-              android:layout_height="wrap_content"/>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

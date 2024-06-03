@@ -27,9 +27,7 @@ class FirstActivity : AppCompatActivity() {
         }
 
 
-
     }
-
 
 
 }

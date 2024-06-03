@@ -36,19 +36,28 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.txtPassword1.text.toString()
 
             if (checkField()) {
-                firebaseAuth.signInWithEmailAndPassword(email, password) .addOnCompleteListener {
+                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val moveToRegisterActivity = Intent(this@LoginActivity, FirstActivity::class.java)
+                        val moveToRegisterActivity =
+                            Intent(this@LoginActivity, FirstActivity::class.java)
                         startActivity(moveToRegisterActivity)
                     } else {
                         if (it.exception is FirebaseAuthInvalidUserException || it.exception is FirebaseAuthInvalidCredentialsException) {
                             logindokter(email, password)
                         } else {
-                            Toast.makeText(this@LoginActivity, "Username or Password is not correct", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                this@LoginActivity,
+                                "Username or Password is not correct",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
                 }
             }
+        }
+
+        binding.back.setOnClickListener {
+            onBackPressed()
         }
     }
 
@@ -95,7 +104,11 @@ class LoginActivity : AppCompatActivity() {
         client.newCall(requestLogin).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 runOnUiThread {
-                    Toast.makeText(this@LoginActivity, "Failed to connect to server", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Failed to connect to server",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
 
@@ -105,7 +118,8 @@ class LoginActivity : AppCompatActivity() {
                     val jsonResponse = JSONObject(responseBody ?: "{}")
                     val message = jsonResponse.optString("message", "")
                     if (message == "Login successful") {
-                        Toast.makeText(this@LoginActivity, "Login successful", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@LoginActivity, "Login successful", Toast.LENGTH_SHORT)
+                            .show()
                         // Navigate to DashboardActivity
                         val intent = Intent(this@LoginActivity, DashboardDokterActivity::class.java)
                         startActivity(intent)

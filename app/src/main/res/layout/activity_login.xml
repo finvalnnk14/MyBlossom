@@ -8,9 +8,17 @@
     android:layout_margin="16dp"
     tools:context=".LoginActivity">
 
-
+    <ImageView
+        android:id="@+id/back"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:src="@drawable/ic_back"
+        app:tint="@color/colorRed" />
 
     <ImageView
+        android:layout_marginTop="100dp"
         android:id="@+id/blossomImage"
         android:layout_width="150dp"
         android:layout_height="100dp"
@@ -36,6 +44,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="10dp"
         app:errorEnabled="true"
         android:layout_marginTop="50dp"
         android:hint="Enter the email">
@@ -57,6 +67,8 @@
         app:errorEnabled="true"
         app:endIconMode="password_toggle"
         android:hint="Enter the Password"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="10dp"
         app:errorIconDrawable="@null"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
