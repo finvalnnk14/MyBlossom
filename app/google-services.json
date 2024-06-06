@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "357511721515",
+    "project_id": "bloossom-caec4",
+    "storage_bucket": "bloossom-caec4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357511721515:android:9516327e9e3c84d2c3f06e",
+        "android_client_info": {
+          "package_name": "com.example.myblossom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9JRr5Ht6j0yvXDHi6DDfoflDkmeBMqzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

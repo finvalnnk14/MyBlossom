@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context=".ModActivity">
+
+
+    <ImageView
+        android:id="@+id/blossomImage"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/mood" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Bagaimana mood anda hari ini ?"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorRed"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/senang"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:text="Senang"/>
+
+        <RadioButton
+            android:id="@+id/biasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biasa aja"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/sedih"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:text="Sedih"/>
+
+        <RadioButton
+            android:id="@+id/gaknafsu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gak Nafsu Makan"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:id="@+id/linearLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/kesal"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:text="Kesal"/>
+
+        <RadioButton
+            android:id="@+id/makan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Makan Terus"/>
+
+    </LinearLayout>
+
+    </RadioGroup>
+
+
+
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/validateBtn2"
+        android:layout_width="156dp"
+        android:layout_height="55dp"
+        android:background="@drawable/bottomsudah"
+        android:layout_gravity="right"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:text="Berikutnya" />
+
+
+</LinearLayout>
