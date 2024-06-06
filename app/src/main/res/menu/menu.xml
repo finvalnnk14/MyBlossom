@@ -3,11 +3,11 @@
 
     <item android:title="Home"
         android:id="@+id/homeFragment"
-        android:icon="@drawable/home"/>
+        android:icon="@drawable/ic_home"/>
 
     <item android:title="Konsultasi"
         android:id="@+id/konsultasiFragment"
-        android:icon="@drawable/ic_konsultasi"/>
+        android:icon="@drawable/ic_consult"/>
 
     <item android:title="Article"
         android:id="@+id/articleFragment"
