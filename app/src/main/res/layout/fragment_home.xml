@@ -50,7 +50,9 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <TextView android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="match_parent"
               android:layout_centerInParent="true"
               android:textAlignment="center"
               android:textSize="18sp"

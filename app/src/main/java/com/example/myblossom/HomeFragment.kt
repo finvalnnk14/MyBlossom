@@ -1,24 +1,28 @@
 package com.example.myblossom
 
-import android.app.DatePickerDialog
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
-import java.text.SimpleDateFormat
+import com.example.myblossom.databinding.FragmentHomeBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.*
 
+
+const val BASE_URL = "http://34.101.154.16:8000/"
 
 class HomeFragment : Fragment() {
 
     private val progressBar: ProgressBar? = null
     private val progressText: TextView? = null
+    private lateinit var binding: FragmentHomeBinding
 
 
     // lateinit var laundriesRecycler: RecyclerView
@@ -31,6 +35,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentHomeBinding.inflate(layoutInflater)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         //laundriesRecycler = root.findViewById(R.id.fragment_home)
         //progressBar = findViewById(R.layout.progress_bar);
@@ -93,6 +98,4 @@ class HomeFragment : Fragment() {
 
         //return inflater.inflate(R.layout.fragment_home,container,false)
     }
-
-
 }

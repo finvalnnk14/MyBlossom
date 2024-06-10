@@ -19,16 +19,16 @@ class MainActivity : AppCompatActivity() {
         val regBtn = findViewById<Button>(regBtn)
         mulaiBtn.setOnClickListener {
 
-            val intent = Intent(this@MainActivity, LoginActivity::class.java)
-            startActivity(intent)
+            //val intent = Intent(this@ExampleAPIActivity, LoginActivity::class.java)
+            //startActivity(intent)
 
         }
 
 
         regBtn.setOnClickListener {
 
-            val intent = Intent(this@MainActivity, RegActivity::class.java)
-            startActivity(intent)
+            //val intent = Intent(this@ExampleAPIActivity, RegActivity::class.java)
+            //startActivity(intent)
 
         }
 
