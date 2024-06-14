@@ -33,7 +33,7 @@ class RegActivity : AppCompatActivity() {
                 firebaseAuth.createUserWithEmailAndPassword(email, password) .addOnCompleteListener {
                     if(it.isSuccessful) {
                         Toast.makeText(this, "Account created successfully!", Toast.LENGTH_SHORT) .show()
-                        val moveToMainActivity = Intent(this@RegActivity, ExampleAPIActivity::class.java)
+                        val moveToMainActivity = Intent(this@RegActivity, MainActivity::class.java)
                         startActivity(moveToMainActivity)
                     }
                     else {

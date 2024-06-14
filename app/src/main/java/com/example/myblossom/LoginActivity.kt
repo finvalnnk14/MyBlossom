@@ -17,6 +17,7 @@ import org.json.JSONObject
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody
 
+@Suppress("DEPRECATION")
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
@@ -39,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
                         val moveToRegisterActivity =
-                            Intent(this@LoginActivity, FirstActivity::class.java)
+                            Intent(this@LoginActivity, ModActivity::class.java)
                         startActivity(moveToRegisterActivity)
                     } else {
                         if (it.exception is FirebaseAuthInvalidUserException || it.exception is FirebaseAuthInvalidCredentialsException) {

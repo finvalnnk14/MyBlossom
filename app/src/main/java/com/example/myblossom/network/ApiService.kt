@@ -9,6 +9,7 @@ import retrofit2.http.Query
 
 interface ApiService {
     @POST("/predict")
-    suspend fun getPrediction(@Query("tanggal_mulai") tanggal_mulai:String, @Query("panjang_siklus") panjang_siklus:Number, ): PredictResponse
+    suspend fun getPrediction(@Query("tanggal_mulai") tanggal_mulai:String,
+                              @Query("panjang_siklus") panjang_siklus:Number, ): PredictResponse
 }
                                     
