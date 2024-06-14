@@ -15,8 +15,8 @@
 
 💻 Tech Stack: 💻
 - 📱 Mobile Development: Kotlin
-- 🤖 Machine Learning: Tensorflow Lite
-- ☁️ Cloud Computing: NodeJs, Google Clound Platform
+- 🤖 Machine Learning: Tensorflow
+- ☁️ Cloud Computing: ExpressJs, Flask, Fast API, Google Cloud Platform
 
 ----------------------------------------------------------------
 Aplikasi ini merupakan projek akhir Bangkit Academy 2024 Batch 1
