@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Bloossom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="assets/images/logo.png" alt=""></a>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#steps">Keunggulan</a>
+            <a href="#fasilitas">fasilitas</a>
+            <a href="#about">Tentang Saya</a>
+            <a href="#mitra">Daftar Mitra</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section class="home" id="home">
+                <div class="content">
+                    <h3>Pantau Kesehatan Tubuh Anda Dengan Memantau Siklus Anda</h3>
+                    <p>Pilihan ideal bagi para perempuan untuk membantu mereka dalam memantau siklus mereka. Aplikasi
+                        yang aman dan juga ramah, dapat membuat para perempuan nyaman menggunakannya</p>
+                    <a href="#" class="btn">Download Now!</a>
+                    <a href="#mitra" class="btn">Daftar Mitra</a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/sahabat.jpg" alt="">
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <div class="step-container" id="steps">
+                <h1 class="heading">Keunggulan <span>Kami</span></h1>
+                <section class="steps">
+                    <div class="box">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <h3>Terpecaya</h3>
+                    </div>
+                    <div class="box">
+                        <i class="fa-brands fa-google-play"></i>
+                        <h3>Tersedia di playstore</h3>
+                    </div>
+                    <div class="box">
+                        <i class="fa-solid fa-user-group"></i>
+                        <h3>User Friendly</h3>
+                    </div>
+                    <div class="box">
+                        <i class="fa-solid fa-shield"></i>
+                        <h3>Keamanan Terjamin</h3>
+                    </div>
+                </section>
+            </div>
+        </article>
+
+        <article>
+            <section class="fasilitas" id="fasilitas">
+                <h1 class="heading"> Fasilitas <span>Kami</span> </h1>
+                <div class="box-container">
+                    <div class="box">
+                        <div class="content">
+                            <i class="fa-solid fa-droplet"></i>
+                            <h3>Mendeteksi Tanggal Siklus Berikutnya</h3>
+                            <p>Aplikasi Bloossom dapat mendeteksi tanggal siklus menstruasi perempuan secara otomatis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <i class="fa-solid fa-stethoscope"></i>
+                            <h3>Konsultasi Dokter</h3>
+                            <p>Bloossom memiliki 500+ dokter terpecaya. Anda dapat berkonsultasi mengenai permasalahan
+                                anda secara gratis.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <i class="fa-solid fa-newspaper"></i>
+                            <h3>Article</h3>
+                            <p>Bisa membantu meningkatkan wawasan anda supaya anda dapat meningkatkan kesehatan tubuh
+                                anda.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <i class="fa-solid fa-user-group"></i>
+                            <h3>Mitra Dokter</h3>
+                            <p> Bagi yang ingin bergabung menjadi dokter di aplikasi bloossom dapat daftar Mitra Dokter.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <i class="fa-solid fa-clock"></i>
+                            <h3>Layanan 24 Jam</h3>
+                            <p>Kami menyediakan layanan 24 jam setiap hari nya untuk membantu keluhan anda.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <i class="fa-solid fa-wifi"></i>
+                            <h3>Tidak Terbatas</h3>
+                            <p>Aplikasi Bloossom dapat diakses kapan saja dan dimana saja. Anda cukup memiliki koneksi
+                                internet maka anda bisa berkonsultasi menggunakan aplikasi kami</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <aside>
+            <section class="about" id="about">
+                <h3 class="heading"> Daftar <span>Mitra</span> </h3>
+                <div class="box-container">
+                    <div class="box">
+                        <h3>Silahkan Isi Formulir Dibawah Ini! </h3>
+                        <form id="registerForm" method="POST">
+                            <label for="name">
+                                <h3>Nama:
+                            </label><br></h3>
+                            <input type="text" id="name" name="name" required><br>
+
+                            <label for="email">
+                                <h3>Email:
+                            </label><br></h3>
+                            <input type="email" id="userEmail" name="userEmail" required><br>
+
+                            <input type="submit" value="Kirim">
+                        </form>
+                        <p>Setelah anda submit formulir daftar mitra, selanjutnya silahkan tunggu email yang akan kami
+                            berikan kepada anda.</p>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+        <aside>
+            <section class="about" id="about">
+                <h1 class="heading"> Tentang <span>Kami</span> </h1>
+                <div class="box-container">
+                    <div class="box">
+                        <img src="assets/images/AliAkbar.png" alt="">
+                        <h3>Fina Valentina</h3>
+                        <p>2024 Mobile Development Cohort @ Bangkit Academy</p>
+                        <p>Currently studying at Multimedia Nusantara in Computer Engineering major</p>
+                    </div>
+                    <div class="box">
+                        <img src="assets/images/AliAkbar.png" alt="">
+                        <h3>Fariz Aziz Kurniawan</h3>
+                        <p>2024 Mobile Development Cohort @ Bangkit Academy</p>
+                        <p>Currently studying at UIN Sunan Kalijaga in Informatics major</p>
+                    </div>
+                    <div class="box">
+                        <img src="assets/images/AliAkbar.png" alt="">
+                        <h3>Dody Naufal</h3>
+                        <p>2024 Machine Learning Cohort @ Bangkit Academy</p>
+                        <p>Currently studying at Universitas Bina Bangsa in Informatics major</p>
+                    </div>
+
+                </div>
+                <div class="box-container">
+                    <div class="box">
+                        <img src="assets/images/AliAkbar.png" alt="">
+                        <h3>Icha Revi Amanda</h3>
+                        <p>2024 Machine Learning Cohort @ Bangkit Academy</p>
+                        <p>Currently studying at Universitas Indonesia in Mathematics major</p>
+                    </div>
+                    <div class="box">
+                        <img src="assets/images/AliAkbar.png" alt="">
+                        <h3>Ali Akbar Said</h3>
+                        <p>2024 Cloud Computing Cohort @ Bangkit Academy</p>
+                        <p>Currently studying at Gunadarma University in Informatics major</p>
+                    </div>
+                    <div class="box">
+                        <img src="assets/images/AliAkbar.png" alt="">
+                        <h3>Mutiara Khairunisa</h3>
+                        <p>2024 Cloud Computing Cohort @ Bangkit Academy</p>
+                        <p>Currently studying at Udayana University in Informatics major</p>
+                    </div>
+                </div>
+
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="share">
+            <a href="https://www.instagram.com/a.a.said_18" class="btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ali-akbar-said-063644217/" class="btn"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <h1 class="credit"> ©2024 <span> ALI AKBAR SAID. </span>All Rights Reserved.</h1>
+    </footer>
+    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
