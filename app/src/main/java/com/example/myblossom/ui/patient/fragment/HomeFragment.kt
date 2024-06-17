@@ -47,7 +47,7 @@ class HomeFragment : Fragment() {
             val tanggalMulai = tanggalMulai.text.toString()
             val panjangSiklus = panjangSiklus.text.toString()
             val request =
-                PredictRequest(tanggal_mulai = tanggalMulai, panjang_siklus = panjangSiklus)
+                PredictRequest(startDate = tanggalMulai, cycleLength = panjangSiklus)
             predictViewModel.getPrediction(request)
         }
 

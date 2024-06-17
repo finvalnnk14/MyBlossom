@@ -2,8 +2,8 @@
 package com.example.myblossom.model
 
 data class PredictRequest(
-    val tanggal_mulai: String,
-    val panjang_siklus: String
+    val startDate: String,
+    val cycleLength: String
 )
 
 data class PredictResponse(

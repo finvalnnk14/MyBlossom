@@ -20,7 +20,6 @@ class PredictRepository {
     }
 
     suspend fun getPrediction(request: PredictRequest): PredictResponse {
-        return apiService.getPrediction(request.tanggal_mulai, request.panjang_siklus.toInt())
+        return apiService.getPrediction(request.startDate, request.cycleLength.toInt())
     }
 }
-                                    
