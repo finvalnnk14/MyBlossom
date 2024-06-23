@@ -38,6 +38,9 @@ Dokter:
 - Cloud Computing: <a href='https://github.com/finvalnnk14/MyBlossom/tree/branch-cc/CC'> Branch CC </a>
 - Machine Learning: <a href='https://github.com/finvalnnk14/MyBlossom/tree/branch-ml/ML'> Branch ML </a>
 
+![WhatsApp Image 2024-06-07 at 21 55 32(1)](https://github.com/finvalnnk14/MyBlossom/assets/115550259/f6256afd-7576-468d-9aa4-c910878f0af4)
+VM Setup from CC
+
 ⚠️Reminder⚠️
 Aplikasi pendeteksi siklus pada wanita ini tidak mampu mendeteksi secara akurat, dikarenakan setiap orang mempunyai siklus yang berbeda-beda.
 Aplikasi ini lebih baik digunakan untuk orang-orang yang tidak mengidap penyakit Polycystic Ovary Syndrome (PCOS), menopause, dll.
