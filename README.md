@@ -38,11 +38,14 @@ Dokter:
 - Cloud Computing: <a href='https://github.com/finvalnnk14/MyBlossom/tree/branch-cc/CC'> Branch CC </a>
 - Machine Learning: <a href='https://github.com/finvalnnk14/MyBlossom/tree/branch-ml/ML'> Branch ML </a>
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ![WhatsApp Image 2024-06-07 at 21 55 32(1)](https://github.com/finvalnnk14/MyBlossom/assets/115550259/f6256afd-7576-468d-9aa4-c910878f0af4)
 FastApi Setup from CC
 
 ![WhatsApp Image 2024-06-13 at 16 29 00(1)](https://github.com/finvalnnk14/MyBlossom/assets/115550259/ab2cda84-04bc-42ea-b3bf-d26cb57bbf5f)
 VM Setup from CC
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ‼️ Jika aplikasi tidak dapat memprediksi tanggal siklus kemungkinan besar billing gcp habis ‼️ Akan tetapi sebelumnya kami telah berhasil menghubungkan api dan berhasil memprediksi tanggal siklus, ini bukti dokumentasinya:
 
