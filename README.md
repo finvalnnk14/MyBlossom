@@ -44,6 +44,12 @@ FastApi Setup from CC
 ![WhatsApp Image 2024-06-13 at 16 29 00(1)](https://github.com/finvalnnk14/MyBlossom/assets/115550259/ab2cda84-04bc-42ea-b3bf-d26cb57bbf5f)
 VM Setup from CC
 
+‼️ Jika aplikasi tidak dapat memprediksi tanggal siklus kemungkinan besar billing gcp habis ‼️ Akan tetapi sebelumnya kami telah berhasil menghubungkan api dan berhasil memprediksi tanggal siklus, ini bukti dokumentasinya:
+
+
+https://github.com/finvalnnk14/MyBlossom/assets/115550259/35fa011a-5639-4907-ba88-b3ae475c0780
+
+
 
 ⚠️Reminder⚠️
 Aplikasi pendeteksi siklus pada wanita ini tidak mampu mendeteksi secara akurat, dikarenakan setiap orang mempunyai siklus yang berbeda-beda.
